@@ -1,5 +1,7 @@
 var path = require('path')
 var webpack = require('webpack')
+const { VueLoaderPlugin } = require('vue-loader')
+const UglifyJSPlugin = require('uglifyjs-webpack-plugin')
 
 module.exports = {
   entry: './compiled/index.js',
@@ -34,6 +36,16 @@ module.exports = {
       }
     ]
   },
+  plugins: [
+    // make sure to include the plugin!
+    new VueLoaderPlugin(), 
+    new UglifyJSPlugin({
+      sourceMap: true,
+      compress: {
+        warnings: false
+      }
+    })
+  ],
   devServer: {
     historyApiFallback: true,
     noInfo: true
@@ -51,12 +63,6 @@ if (process.env.NODE_ENV === 'production') {
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: '"production"'
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      sourceMap: true,
-      compress: {
-        warnings: false
       }
     }),
     new webpack.LoaderOptionsPlugin({

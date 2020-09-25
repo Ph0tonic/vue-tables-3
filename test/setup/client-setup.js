@@ -1,7 +1,7 @@
 
 import Vue from 'vue'
 import Vuex from 'vuex'
-import { mount } from 'vue-test-utils'
+import { mount } from '@vue/test-utils'
 import ClientTable from '../../compiled/v-client-table'
 import {Event} from '../../compiled/index.js';
 import data from './example-data'

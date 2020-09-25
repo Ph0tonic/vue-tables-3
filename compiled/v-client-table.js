@@ -1,6 +1,6 @@
 "use strict";
 
-var _vuePagination = _interopRequireDefault(require("vue-pagination-2"));
+var _vuePagination = _interopRequireDefault(require("vue-pagination-3"));
 
 var _vuex = _interopRequireDefault(require("./state/vuex"));
 

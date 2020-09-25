@@ -1,5 +1,4 @@
 import childRow from './setup/ChildRow.vue';
-import {mount} from 'vue-test-utils';
 
 describe(suite + ': Child row', () => {
 	

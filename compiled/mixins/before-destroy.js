@@ -10,9 +10,9 @@ module.exports = function () {
   var el;
 
   if (this.opts.destroyEventBus) {
-    _bus["default"].$off();
+    _bus["default"].off();
 
-    _bus["default"].$destroy();
+    _bus["default"].all.clear();
   }
 
   if (this.vuex && !this.opts.preserveState) {

@@ -1,0 +1,1 @@
+ docker run -it -p 8003:8080 -v /projects/vue-tables-3:/app --rm --name vue3-app vue3-dev:1.0
